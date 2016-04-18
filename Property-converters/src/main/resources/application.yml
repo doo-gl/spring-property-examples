@@ -1,0 +1,11 @@
+server:
+  port: 8088
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+
+doo:
+  gl:
+    theFarFuture: 3000-01-01T10:20:30.000000040Z[GMT]

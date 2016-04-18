@@ -1,0 +1,50 @@
+server:
+  port: 8083
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+doo:
+  gl:
+    simple:
+      # these properties could have been represented in a .properties file as doo.gl.simple.someSimpleProperty
+      someSimpleProperty: This is a simple property
+      # The random value property produced a random mixture of letter and numbers, similar to a UUID
+      randomValue: ${random.value}
+      # Random int returns a random integer between MIN and MAX int values
+      randomInt: ${random.int}
+      # adding range brackets will produce a integer in a range. The upper bound is exclusive.
+      randomIntRange: ${random.int(100,102)}
+    collection:
+      listProperties:
+        # list properties are specified using a dash
+        # These properties will all be mapped to a list called listProperties
+        - Lions
+        - And Tigers
+        - And Bears
+        - Oh my!
+      mappedProperties:
+        # mapped properties look very similar to simple properties
+        # this is because the yml format is effectively a nested set of maps
+        # for a map propertie we are telling spring to return the value one below
+        # most nested value
+        numberOfElvenRings: 3
+        numberOfDwarvenRings: 7
+        numberOfMortalRings: 9
+        numberOfOneRings: 1
+    complex:
+      complexProperties:
+        # the complex properties are mapping each list item onto a pojo
+        -
+          id: 12345
+          name: Scooby doo
+          counts:
+            - 1
+            - 5
+        -
+          id: 45678
+          name: Shaggy
+          counts:
+            - 7
+            - 9

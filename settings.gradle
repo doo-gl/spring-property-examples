@@ -1,0 +1,8 @@
+rootProject.name = 'spring-config-properties-example'
+include 'Relaxed-binding'
+include 'Using-yaml-files'
+include 'Property-profiles'
+include 'Property-converters'
+include 'Simple-config-properties'
+include 'Simple-single-property'
+

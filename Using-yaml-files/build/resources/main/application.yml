@@ -1,0 +1,39 @@
+server:
+  port: 8083
+spring:
+  jackson:
+    serialization:
+      indent_output: true
+
+doo:
+  gl:
+    simple:
+      someSimpleProperty: This is a simple property
+      randomValue: ${random.value}
+      randomInt: ${random.int}
+      randomIntRange: ${random.int(100,101)}
+    collection:
+      listProperties:
+        - Lions
+        - And Tigers
+        - And Bears
+        - Oh my!
+      mappedProperties:
+        numberOfElvenRings: 3
+        numberOfDwarvenRings: 7
+        numberOfMortalRings: 9
+        numberOfOneRings: 1
+    complex:
+      complexProperties:
+        -
+          id: 12345
+          name: Scooby doo
+          counts:
+            - 1
+            - 5
+        -
+          id: 45678
+          name: Shaggy
+          counts:
+            - 7
+            - 9
